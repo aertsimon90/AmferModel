@@ -106,3 +106,66 @@ model.loadbrain(file="brain.dat", safe=True)
 model.savesession(file="session.dat", safe=True, session="system")
 model.loadsession(file="session.dat", safe=True, session="system")
 ```
+Anlaşıldı, işte her bir fonksiyonun olası çıktılarına ek olarak, dönüş değeri olarak kullanılabilen örnek değerler:
+
+### Core Functions
+- **`include_language(language)`**
+  - **Example Return Value**: None (No return value).
+
+- **`similarity(text1, text2)`**
+  - **Example Return Value**: A similarity score between 0 and 100.
+
+- **`language_detector(data)`**
+  - **Example Return Value**: The detected language code (e.g., "en" for English).
+
+- **`tokenizer(data)`**
+  - **Example Return Value**: A list of tokens (words) extracted from the provided data.
+
+### Text Generation
+- **`completion(data, temperature=0.2, max_tokens=150, count=1, session="system", recall=False, keepinmind=False, wordreply=True, wordreplycount=5)`**
+  - **Example Return Value**: ["Generated Text", TimeSpent]
+
+### Observation
+- **`observation_detector(data, language="system")`**
+  - **Example Return Value**: A list of indices representing the positions of words in the vocabulary of the specified language. (e.g. [0, 5, 17, 4])
+
+### Hierarchical Hidden Markov Model (HHMM)
+- **`hhmm(data, temperature=0.5, max_tokens=150, count=1, session="system", recall=False, keepinmind=False)`**
+  - **Example Return Value**: ["GeneratedText", TimeSpent]
+
+### Text to Image
+- **`text_to_image(data, file="result.jpg", create_temp=0.1, guess_temp=0.5)`**
+  - **Example Return Value**: None
+
+### Deviation
+- **`deviate(data, temperature=0.5, language="system")`**
+  - **Example Return Value**: The modified text after applying deviation.
+
+### Predefined Training Sets
+- **`amfer_setup(setupname, controlled=True, temperature=0.2)`**
+  - **Example Return Value**: None (No return value).
+
+- **`include_setup(setupname, data, language="system")`**
+  - **Example Return Value**: None (No return value).
+
+- **`delete_setup(setupname)`**
+  - **Example Return Value**: None (No return value).
+
+### Brain and Session Management
+- **`presave()`**
+  - **Example Return Value**: None (No return value).
+
+- **`preload()`**
+  - **Example Return Value**: None (No return value).
+
+- **`savebrain(file, safe=True)`**
+  - **Example Return Value**: None (No return value).
+
+- **`loadbrain(file, safe=True)`**
+  - **Example Return Value**: None (No return value).
+
+- **`savesession(file, safe=True, session="system")`**
+  - **Example Return Value**: None (No return value).
+
+- **`loadsession(file, safe=True, session="system")`**
+  - **Example Return Value**: None (No return value).
