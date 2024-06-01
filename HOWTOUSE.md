@@ -51,7 +51,7 @@ model.learnimage(file="image.jpg", means="a cat")
 
 ### Text Completion
 ```python
-generated_text, time_spent = model.completion(data="Once upon a time", temperature=0.2, max_tokens=50)
+generated_text, time_spent = model.completion(data="Once upon a time", temperature=0.2, max_tokens=50, transformdata=False)
 ```
 
 ### Observation Detection
@@ -122,7 +122,7 @@ Anlaşıldı, işte her bir fonksiyonun olası çıktılarına ek olarak, dönü
   - **Example Return Value**: A list of tokens (words) extracted from the provided data.
 
 ### Text Generation
-- **`completion(data, temperature=0.2, max_tokens=150, count=1, session="system", recall=False, keepinmind=False, wordreply=True, wordreplycount=5)`**
+- **`completion(data, temperature=0.2, max_tokens=150, count=1, session="system", recall=False, keepinmind=False, wordreply=True, wordreplycount=5, transformdata=False)`**
   - **Example Return Value**: ["Generated Text", TimeSpent]
 
 ### Observation
