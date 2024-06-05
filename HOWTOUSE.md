@@ -97,14 +97,14 @@ model.preload()
 
 ### Saving/Loading Brain Data to/from a File
 ```python
-model.savebrain(file="brain.dat", safe=True)
-model.loadbrain(file="brain.dat", safe=True)
+model.savebrain(file="brain.amfer", safe=True)
+model.loadbrain(file="brain.amfer", safe=True)
 ```
 
 ### Saving/Loading Session to/from a File
 ```python
-model.savesession(file="session.dat", safe=True, session="system")
-model.loadsession(file="session.dat", safe=True, session="system")
+model.savesession(file="session.amfers", safe=True, session="system")
+model.loadsession(file="session.amfers", safe=True, session="system")
 ```
 Anlaşıldı, işte her bir fonksiyonun olası çıktılarına ek olarak, dönüş değeri olarak kullanılabilen örnek değerler:
 
